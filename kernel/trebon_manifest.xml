@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
-
-  <remote  name="gh" fetch="git://github.com/" />
   
-  <project path="kernel/samsung/msm7x27a" name="TesterTerbon/kernel_trebon" revision="cm-11.0" />
+  <project path="kernel/samsung/msm7x27a" name="TesterTerbon/kernel_trebon" remote="rm" revision="cm-11.0" />
   </manifest>
