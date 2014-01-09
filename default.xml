@@ -6,7 +6,7 @@
            review="android-review.googlesource.com" />
    
   <remote  name="github"
-           fetch="https://github.com/" /> 
+           fetch="https://github.com/CyanogenMod/" /> 
            
   <remote  name="omnirom"
            review="gerrit.omnirom.org"
