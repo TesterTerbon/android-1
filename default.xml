@@ -2,17 +2,8 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com"
-           review="android-review.googlesource.com" />
-   
-  <remote  name="github"
-           fetch=".."
-           review="review.cyanogenmod.org" />
-           
-  <remote  name="omnirom"
-           review="gerrit.omnirom.org"
-           fetch="https://github.com/omnirom" />
-           
+           fetch="https://android.googlesource.com/" />
+
   <remote  name="cm"
            fetch="git://github.com/CyanogenMod/" />
 
@@ -21,36 +12,45 @@
 
   <remote  name="ls"
            fetch="https://github.com/LiquidSmooth/" />
+           
+   <remote  name="rm"
+           fetch="git://github.com/TesterTerbon/" />        
 
   <remote  name="sr"
            fetch="git://github.com/SlimRoms/" />
-           
-   
-  <remote  name="private"
-           fetch="ssh://git@github.com" />        
 
   <remote  name="tm"
            fetch="git://github.com/TheMuppets/" />
-   
-    <default revision="refs/tags/android-4.4.2_r1"
-           remote="aosp"
-           sync-j="4" />
-  
- 
 
-  <project path="build" name="android_build" remote="cm" revision="cm-11.0">
+  <default revision="refs/tags/android-4.4.2_r1"
+           remote="aosp"
+           sync-j="8" />
+
+  <project path="build" name="android_build" remote="ls" revision="kitkat">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="android" name="android" remote="cm" revision="cm-11.0" />
+  <project path="android" name="android" remote="ls" revision="kitkat" />
   <project path="abi/cpp" name="platform/abi/cpp" />
-  <project path="art" name="android_art" remote="cm" revision="cm-11.0" />
-  <project path="bionic" name="android_bionic" remote="cm" revision="cm-11.0" />
+  <project path="art" name="android_art" remote="ls" revision="kitkat" />
+  <project path="bionic" name="android_bionic" remote="ls" revision="kitkat" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="cm" revision="cm-11.0" />
-  <project path="dalvik" name="android_dalvik" remote="cm" revision="cm-11.0" />
-  <project path="development" name="android_development" remote="cm" revision="cm-11.0" />
+  <project path="dalvik" name="android_dalvik" remote="ls" revision="kitkat" />
+  <project path="development" name="android_development" remote="ls" revision="kitkat" />
   <project path="device/common" name="android_device_common" remote="cm" revision="cm-11.0" />
+  <project path="device/generic/armv7-a-neon" name="android_device_generic_armv7-a-neon" groups="pdk" remote="cm" revision="cm-11.0" />
+  <project path="device/generic/common" name="android_device_generic_common" groups="pdk" remote="cm" revision="cm-11.0" />
+  <project path="device/generic/goldfish" name="android_device_generic_goldfish" groups="pdk" />
+  <project path="device/generic/mips" name="android_device_generic_mips" groups="pdk" remote="cm" revision="cm-11.0" />
+  <project path="device/generic/x86" name="android_device_generic_x86" groups="pdk" remote="cm" revision="cm-11.0" />
+  <project path="device/generic/mini-emulator-armv7-a-neon" name="generic/mini-emulator-armv7-a-neon" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
+  <project path="device/generic/mini-emulator-mips" name="generic/mini-emulator-mips" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
+  <project path="device/generic/mini-emulator-x86" name="generic/mini-emulator-x86" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
+  <project path="device/google/accessory/arduino" name="android_device_google_accessory_arduino" groups="device" remote="cm" revision="cm-11.0" />
+  <project path="device/google/accessory/demokit" name="android_device_google_accessory_demokit" groups="device" remote="cm" revision="cm-11.0" />
   <project path="device/sample" name="device/sample" />
+  <project path="device/samsung/msm7x27a-common" name="android_device_samsung_msm7x27a-common-1" remote="rm" revision="cm-11.0" />
+  <project path="device/samsung/trebon" name="android_device_samsung_trebon" remote="rm" revision="cm-11.0" />
   <project path="external/aac" name="platform/external/aac" />
   <project path="external/android-clat" name="platform/external/android-clat" />
   <project path="external/android-mock" name="android_external_android-mock" remote="cm" revision="cm-11.0" />
@@ -97,15 +97,15 @@
   <project path="external/chromium_org/tools/grit" name="platform/external/chromium_org/tools/grit" />
   <project path="external/chromium_org/tools/gyp" name="platform/external/chromium_org/tools/gyp" />
   <project path="external/chromium_org/v8" name="platform/external/chromium_org/v8" />
-  <project path="external/clang" name="android_external_clang" remote="cm" revision="cm-11.0" />
+  <project path="external/clang" name="android_external_clang" remote="ls" revision="kitkat" />
   <project path="external/compiler-rt" name="platform/external/compiler-rt" />
   <project path="external/dexmaker" name="platform/external/dexmaker" />
   <project path="external/dhcpcd" name="platform/external/dhcpcd" />
-  <project path="external/dnsmasq" name="android_external_dnsmasq" remote="cm" revision="cm-11.0" />
+  <project path="external/dnsmasq" name="android_external_dnsmasq" remote="ls" revision="kitkat" />
   <project path="external/doclava" name="platform/external/doclava" />
   <project path="external/dropbear" name="platform/external/dropbear" />
   <project path="external/droiddriver" name="platform/external/droiddriver" />
-  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="cm" revision="cm-11.0" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="ls" revision="kitkat" />
   <project path="external/easymock" name="platform/external/easymock" />
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" />
   <project path="external/eclipse-windowbuilder" name="platform/external/eclipse-windowbuilder" />
@@ -206,7 +206,7 @@
   <project path="external/openfst" name="platform/external/openfst" />
   <project path="external/openssh" name="platform/external/openssh" remote="ln" revision="linaro_android_4.4.2" />
   <project path="external/openssl" name="platform/external/openssl" remote="ln" revision="linaro_android_4.4.2" />
-  <project path="external/oprofile" name="android_external_oprofile" remote="cm" revision="cm-11.0" />
+  <project path="external/oprofile" name="android_external_oprofile" remote="ls" revision="kitkat" />
   <project path="external/pigz" name="android_external_pigz" remote="cm" revision="cm-11.0" />
   <project path="external/pixman" name="platform/external/pixman" />
   <project path="external/ppp" name="platform/external/ppp" />
@@ -222,7 +222,7 @@
   <project path="external/sepolicy" name="platform/external/sepolicy" />
   <project path="external/sfntly" name="platform/external/sfntly" />
   <project path="external/sil-fonts" name="platform/external/sil-fonts" />
-  <project path="external/skia" name="android_external_skia" remote="cm" revision="cm-11.0" />
+  <project path="external/skia" name="android_external_skia" remote="ls" revision="kitkat" />
   <project path="external/smack" name="platform/external/smack" />
   <project path="external/smali" name="platform/external/smali" />
   <project path="external/sonivox" name="platform/external/sonivox" remote="ln" revision="linaro_android_4.4.2" />
@@ -245,10 +245,10 @@
   <project path="external/tremolo" name="platform/external/tremolo" />
   <project path="external/v8" name="platform/external/v8" remote="ln" revision="linaro_android_4.4.2" />
   <project path="external/valgrind" name="platform/external/valgrind" />
-  <project path="external/webp" name="android_external_webp" remote="cm" revision="cm-11.0" />
+  <project path="external/webp" name="android_external_webp" remote="ls" revision="kitkat" />
   <project path="external/webrtc" name="platform/external/webrtc" />
   <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="cm" revision="cm-11.0" />
-  <project path="external/wpa_supplicant_8_ti" name="android_external_wpa_supplicant_8_ti" remote="cm" revision="cm-11.0" />
+  <project path="external/wpa_supplicant_8_ti" name="android_external_wpa_supplicant_8_ti" remote="ls" revision="kitkat" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
   <project path="external/yaffs2" name="android_external_yaffs2" remote="cm" revision="cm-11.0" />
@@ -274,7 +274,7 @@
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" remote="ln" revision="linaro_android_4.4.2" />
   <project path="frameworks/opt/photoviewer" name="android_frameworks_opt_photoviewer" remote="cm" revision="cm-11.0" />
   <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" remote="sr" revision="kk4.4" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="cm" revision="cm-11.0" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="ls" revision="kitkat" />
   <project path="frameworks/opt/vcard" name="android_frameworks_opt_vcard" remote="cm" revision="cm-11.0" />
   <project path="frameworks/rs" name="android_frameworks_rs" remote="ls" revision="kitkat" />
   <project path="frameworks/support" name="platform/frameworks/support" />
@@ -426,7 +426,9 @@
   <project path="tools/external/gradle" name="platform/tools/external/gradle" groups="tools" />
   <project path="tools/idea" name="platform/tools/idea" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
+  <project path="vendor/audience" name="proprietary_vendor_audience" remote="tm" revision="cm-11.0" />
   <project path="vendor/liquid" name="android_vendor_liquid" remote="ls" revision="kitkat" />
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="rm" revision="cm-11.0" />
   <project path="vendor/tmobile/apps/ThemeChooser" name="themes-platform-vendor-tmobile-apps-ThemeChooser" remote="cm" revision="cm-11.0" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="android_vendor_tmobile_libs_com.tmobile.themes" remote="cm" revision="cm-11.0" />
   <project path="vendor/tmobile/providers/ThemeManager" name="android_vendor_tmobile_providers_ThemeManager" remote="cm" revision="cm-11.0" />
