@@ -33,9 +33,8 @@
            fetch="git://github.com/TheMuppets/" />
    
    
-  <default revision="refs/tags/android-4.4.2_r1"
-           remote="aosp"
-           revision="refs/heads/cm-11.0"
+  
+  <default revision="refs/heads/cm-11.0"
            remote="github"
            sync-c="true"
            sync-j="4"/>
