@@ -40,12 +40,13 @@
   <project path="device/common" name="android_device_common" remote="cm" revision="cm-11.0" />
   <project path="device/generic/armv7-a-neon" name="android_device_generic_armv7-a-neon" groups="pdk" remote="cm" revision="cm-11.0" />
   <project path="device/generic/common" name="android_device_generic_common" groups="pdk" remote="cm" revision="cm-11.0" />
-  <project path="device/generic/goldfish" name="android_device_generic_goldfish" groups="pdk" />
+  <project path="device/generic/goldfish" name="android_device_generic_goldfish" groups="pdk" remote="cm" revision="cm-11.0" />
   <project path="device/generic/mips" name="android_device_generic_mips" groups="pdk" remote="cm" revision="cm-11.0" />
   <project path="device/generic/x86" name="android_device_generic_x86" groups="pdk" remote="cm" revision="cm-11.0" />
   <project path="device/generic/mini-emulator-armv7-a-neon" name="generic/mini-emulator-armv7-a-neon" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
-  <project path="device/generic/mini-emulator-mips" name="generic/mini-emulator-mips" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
-  <project path="device/generic/mini-emulator-x86" name="generic/mini-emulator-x86" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
+  <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
+  <project path="device/generic/mini-emulator-mips" name="device/generic/mini-emulator-mips" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
+  <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
   <project path="device/google/accessory/arduino" name="android_device_google_accessory_arduino" groups="device" remote="cm" revision="cm-11.0" />
   <project path="device/google/accessory/demokit" name="android_device_google_accessory_demokit" groups="device" remote="cm" revision="cm-11.0" />
   <project path="device/sample" name="device/sample" />
